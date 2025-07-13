@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="imagenes/fs.webp" alt="Logo" />
+        <span>Deco Hogar</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Carrito de Compras</h2>
+    <div id="cart-items"></div>
+    <p id="total"></p>
+    <button onclick="clearCart()" class="clear-btn">Vaciar carrito</button>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Facundo Santiago - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

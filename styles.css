@@ -1,69 +1,75 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Tipografía */
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* Contenedor reutilizable */
-.contenedor {
+.container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Encabezado */
 header {
   background-color: #222;
   color: white;
   padding: 1rem 0;
 }
 
-.logo {
-  font-size: 1.5rem;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-header .contenedor {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Banner */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
 .banner {
-  background: #363636;
+  background: #525252;
   color: white;
   padding: 2rem 0;
   text-align: center;
 }
 
-/* Productos */
-.productos {
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.producto {
+.product-card {
   background: white;
   padding: 1rem;
   border-radius: 8px;
@@ -71,12 +77,12 @@ header .contenedor {
   text-align: center;
 }
 
-.producto img {
+.product-card img {
   max-width: 100%;
   border-radius: 6px;
 }
 
-.producto button {
+.product-card button {
   background-color: #28a745;
   color: white;
   border: none;
@@ -86,15 +92,52 @@ header .contenedor {
   border-radius: 4px;
 }
 
-.producto button:hover {
+.product-card button:hover {
   background-color: #218838;
 }
 
-/* Footer */
+.clear-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.clear-btn:hover {
+  background-color: #c82333;
+}
+
+input[type="number"] {
+  width: 60px;
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+}
+
 footer {
   background-color: #222;
   color: white;
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
